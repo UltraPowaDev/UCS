@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -29,14 +29,14 @@ namespace UCSClientPatcher
 			string fileName = "libg.so";//Place libg in the folder of this program exe
 
             byte[] fileBytes = File.ReadAllBytes(fileName);
-			byte[] searchPattern = HexToByteArray("9bc23206948f104820e347ed47fa92256ca843b72aec503a0982889cd6a7eb38");// CR 1.4.0
 
-			//("bbdba8653396d1df84efaea923ecd150d15eb526a46a6c39b53dac974fff3829");// CR 1.5.0
-
-			//("0f9fff6d583023c5c739c053581c994dbe37789900ffda312fc97edfd091945f");// CR 1.7.0
-
-			//("e330c7916ae0a66f3a90eae97a863ee00ac1dcad058877b1eecfc8fe91c93532");// CR 1.6.0
-
+			/*
+			("9bc23206948f104820e347ed47fa92256ca843b72aec503a0982889cd6a7eb38");// CR 1.4.0
+			("bbdba8653396d1df84efaea923ecd150d15eb526a46a6c39b53dac974fff3829");// CR 1.5.0
+			("0f9fff6d583023c5c739c053581c994dbe37789900ffda312fc97edfd091945f");// CR 1.7.0
+			("e330c7916ae0a66f3a90eae97a863ee00ac1dcad058877b1eecfc8fe91c93532");// CR 1.6.0
+			*/
+			byte[] searchPattern = HexToByteArray("bbdba8653396d1df84efaea923ecd150d15eb526a46a6c39b53dac974fff3829");
             byte[] replacePattern = HexToByteArray("72f1a4a4c48e44da0c42310f800e96624e6dc6a641a9d41c3b5039d8dfadc27e");//CR Patched
 
             Console.Title = "Ultrapowa Client Patcher " + AssemblyVersion + " - © 2016";
