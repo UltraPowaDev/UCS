@@ -157,13 +157,12 @@
 
         public long GetMaxAllianceId()
         {
-            long result = 0L;
             using (ucsdbEntities ucsdbEntities = new ucsdbEntities())
             {
-                result =
-                    (from alliance in ucsdbEntities.clan select ((long?)alliance.ClanId) ?? 0L).DefaultIfEmpty().Max();
+                return ucsdbEntities.clan
+                    .Select(a => (long?)a.ClanId)
+                    .Max() ?? 0L;
             }
-            return result;
         }
 
         public List<long> GetAllPlayerIds()
@@ -207,13 +206,12 @@
 
         public long GetMaxPlayerId()
         {
-            long result = 0L;
             using (ucsdbEntities ucsdbEntities = new ucsdbEntities())
             {
-                result = (from ep in ucsdbEntities.player
-                          select ((long?)ep.PlayerId) ?? 0L).DefaultIfEmpty<long>().Max<long>();
+                return ucsdbEntities.player
+                    .Select(p => (long?)p.PlayerId)
+                    .Max() ?? 0L;
             }
-            return result;
         }
 
         public void RemoveAlliance(Clan alliance)

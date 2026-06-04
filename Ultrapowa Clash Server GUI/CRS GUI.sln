@@ -1,19 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26228.9
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.37301.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRS GUI", "CRS GUI.csproj", "{0E72C402-09B2-4545-AAEB-6AB58971D2FC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ultrapowa Client Patcher", "..\Ultrapowa Client Patcher\Ultrapowa Client Patcher.csproj", "{C77B0E62-22D5-4F8B-9B23-B8B0F1A629DB}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ultrapowa Clash Server GUI", "..\..\..\Clash Of Clans\UCS-GUI\Ultrapowa Clash Server GUI\Ultrapowa Clash Server GUI.csproj", "{CE9C9764-62BD-4091-8EB4-F0C2FCEAB06F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GL.Servers.CR", "..\..\GL.Servers.CR original\GL.Servers.CR.csproj", "{D37FC105-EF32-4B9E-B347-1436D72693EA}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRS", "..\..\working code\CRS.csproj", "{4CE2C6F5-6948-4A52-99EC-7EB6EEEC0D0B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ultrapowa Clash Server", "..\..\..\Clash Of Clans\CoH-master 5-1-17\LATEST UCS\Ultrapowa Clash Server\Ultrapowa Clash Server.csproj", "{A27C159E-302D-4E86-9753-EE765619D643}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,38 +30,11 @@ Global
 		{C77B0E62-22D5-4F8B-9B23-B8B0F1A629DB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C77B0E62-22D5-4F8B-9B23-B8B0F1A629DB}.Release|x64.ActiveCfg = Release|Any CPU
 		{C77B0E62-22D5-4F8B-9B23-B8B0F1A629DB}.Release|x64.Build.0 = Release|Any CPU
-		{CE9C9764-62BD-4091-8EB4-F0C2FCEAB06F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CE9C9764-62BD-4091-8EB4-F0C2FCEAB06F}.Debug|x64.ActiveCfg = Debug|x64
-		{CE9C9764-62BD-4091-8EB4-F0C2FCEAB06F}.Debug|x64.Build.0 = Debug|x64
-		{CE9C9764-62BD-4091-8EB4-F0C2FCEAB06F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CE9C9764-62BD-4091-8EB4-F0C2FCEAB06F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CE9C9764-62BD-4091-8EB4-F0C2FCEAB06F}.Release|x64.ActiveCfg = Release|x64
-		{CE9C9764-62BD-4091-8EB4-F0C2FCEAB06F}.Release|x64.Build.0 = Release|x64
-		{D37FC105-EF32-4B9E-B347-1436D72693EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D37FC105-EF32-4B9E-B347-1436D72693EA}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{D37FC105-EF32-4B9E-B347-1436D72693EA}.Debug|x64.Build.0 = Debug|Any CPU
-		{D37FC105-EF32-4B9E-B347-1436D72693EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D37FC105-EF32-4B9E-B347-1436D72693EA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D37FC105-EF32-4B9E-B347-1436D72693EA}.Release|x64.ActiveCfg = Release|Any CPU
-		{D37FC105-EF32-4B9E-B347-1436D72693EA}.Release|x64.Build.0 = Release|Any CPU
-		{4CE2C6F5-6948-4A52-99EC-7EB6EEEC0D0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4CE2C6F5-6948-4A52-99EC-7EB6EEEC0D0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4CE2C6F5-6948-4A52-99EC-7EB6EEEC0D0B}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{4CE2C6F5-6948-4A52-99EC-7EB6EEEC0D0B}.Debug|x64.Build.0 = Debug|Any CPU
-		{4CE2C6F5-6948-4A52-99EC-7EB6EEEC0D0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4CE2C6F5-6948-4A52-99EC-7EB6EEEC0D0B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4CE2C6F5-6948-4A52-99EC-7EB6EEEC0D0B}.Release|x64.ActiveCfg = Release|Any CPU
-		{4CE2C6F5-6948-4A52-99EC-7EB6EEEC0D0B}.Release|x64.Build.0 = Release|Any CPU
-		{A27C159E-302D-4E86-9753-EE765619D643}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A27C159E-302D-4E86-9753-EE765619D643}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A27C159E-302D-4E86-9753-EE765619D643}.Debug|x64.ActiveCfg = Debug|x64
-		{A27C159E-302D-4E86-9753-EE765619D643}.Debug|x64.Build.0 = Debug|x64
-		{A27C159E-302D-4E86-9753-EE765619D643}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A27C159E-302D-4E86-9753-EE765619D643}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A27C159E-302D-4E86-9753-EE765619D643}.Release|x64.ActiveCfg = Release|x64
-		{A27C159E-302D-4E86-9753-EE765619D643}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F4BE618E-4C4B-4C51-9BBA-84552E563222}
 	EndGlobalSection
 EndGlobal

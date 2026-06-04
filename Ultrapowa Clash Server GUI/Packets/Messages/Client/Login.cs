@@ -49,7 +49,7 @@
         private string kunlunUID;
         private byte UnknownByte2;
 
-        public Login(Client _Client, Reader Reader, int[] _Header) 
+        public Login(Client _Client, Reader Reader, int[] _Header)
             : base(_Client, Reader, _Header)
         {
             this.Client.State = (int)State.LOGIN;
@@ -84,29 +84,29 @@
         /// </summary>
         public override void Decode()
         {
-                this.accountId = this.Reader.ReadInt64(); // User ID
+            this.accountId = this.Reader.ReadInt64(); // User ID
             this.passToken = this.Reader.ReadString(); // User Token
             this.Version[0] = this.Reader.ReadVInt(); // MajorVersion
             this.Version[1] = this.Reader.ReadVInt(); // MinorVersion
             this.Version[2] = this.Reader.ReadVInt(); // Build Version
-                this.resourceSha = this.Reader.ReadString(); // MasterHash
+            this.resourceSha = this.Reader.ReadString(); // MasterHash
 
-                this.UDID = this.Reader.ReadString(); // Udid
+            this.UDID = this.Reader.ReadString(); // Udid
 
-                this.openUdid = this.Reader.ReadString(); // OpenUDID
+            this.openUdid = this.Reader.ReadString(); // OpenUDID
 
-                this.macAddress = this.Reader.ReadString(); // Mac Address
+            this.macAddress = this.Reader.ReadString(); // Mac Address
 
-                this.device = this.Reader.ReadString(); // Device Model
-                this.advertisingGuid = this.Reader.ReadString(); // AGUID
+            this.device = this.Reader.ReadString(); // Device Model
+            this.advertisingGuid = this.Reader.ReadString(); // AGUID
 
-                this.osVersion = this.Reader.ReadString(); // OS Version
+            this.osVersion = this.Reader.ReadString(); // OS Version
 
-                this.isAndroid = this.Reader.ReadBoolean(); // Android != iPhone
-                this.UnknownString[0] = this.Reader.ReadString(); // Unknown
+            this.isAndroid = this.Reader.ReadBoolean(); // Android != iPhone
+            this.UnknownString[0] = this.Reader.ReadString(); // Unknown
 
-                this.androidID = this.Reader.ReadString(); // ADID
-                this.preferredDeviceLanguage = this.Reader.ReadString(); // Region
+            this.androidID = this.Reader.ReadString(); // ADID
+            this.preferredDeviceLanguage = this.Reader.ReadString(); // Region
 
             this.UnknownByte = this.Reader.ReadByte(); // Unknown
 
@@ -123,21 +123,21 @@
             this.UnknownByte2 = this.Reader.ReadByte(); // Unknown
 
             Debug.Write("accountId: " + this.accountId);
-                Debug.Write("passToken: " + this.passToken);
-                Debug.Write("MajorVersion: " + this.Version[0]);
-                Debug.Write("MinorVersion: " + this.Version[1]);
-                Debug.Write("BuildVersion: " + this.Version[2]);
-                Debug.Write("resourceSha: " + this.resourceSha);
-                Debug.Write("UDID: " + this.UDID);
-                Debug.Write("openUdid: " + this.openUdid);
-                Debug.Write("macAddress: " + this.macAddress);
-                Debug.Write("device: " + this.device);
-                Debug.Write("advertisingGuid: " + this.advertisingGuid);
-                Debug.Write("osVersion: " + this.osVersion);
-                Debug.Write("isAndroid: " + this.isAndroid);
-                Debug.Write("UnknownString[0] : " + this.UnknownString[0]);
-                Debug.Write("androidID: " + this.androidID);
-                Debug.Write("preferredDeviceLanguage: " + this.preferredDeviceLanguage);
+            Debug.Write("passToken: " + this.passToken);
+            Debug.Write("MajorVersion: " + this.Version[0]);
+            Debug.Write("MinorVersion: " + this.Version[1]);
+            Debug.Write("BuildVersion: " + this.Version[2]);
+            Debug.Write("resourceSha: " + this.resourceSha);
+            Debug.Write("UDID: " + this.UDID);
+            Debug.Write("openUdid: " + this.openUdid);
+            Debug.Write("macAddress: " + this.macAddress);
+            Debug.Write("device: " + this.device);
+            Debug.Write("advertisingGuid: " + this.advertisingGuid);
+            Debug.Write("osVersion: " + this.osVersion);
+            Debug.Write("isAndroid: " + this.isAndroid);
+            Debug.Write("UnknownString[0] : " + this.UnknownString[0]);
+            Debug.Write("androidID: " + this.androidID);
+            Debug.Write("preferredDeviceLanguage: " + this.preferredDeviceLanguage);
             Debug.Write("UnknownByte: " + this.UnknownByte);
             Debug.Write("preferredLanguage: " + this.preferredLanguage);
             Debug.Write("facebookAttributionId: " + this.facebookAttributionId);
@@ -198,7 +198,7 @@
                 if (!string.Equals(level.GetPlayerAvatar().GetToken(), this.passToken, StringComparison.Ordinal))
                 {
                     var p = new Authentification_Failed(this.Client);
-                    p.SetErrorCode(CodesFail.DATA_BAD);          
+                    p.SetErrorCode(CodesFail.DATA_BAD);
                     p.SetReason("We have some Problems with your Account. Please clean your App Data. https://ultrapowa.com/forum");
                     PacketManager.Send(p);
                     return;
@@ -231,17 +231,17 @@
             level.GetPlayerAvatar().SetUpdate(DateTime.UtcNow);
 
             var LoginOk = new LoginOk(this.Client);
-			LoginOk.SetAccountId(level.GetPlayerAvatar().GetId());
-			LoginOk.SetPassToken(level.GetPlayerAvatar().GetToken());
+            LoginOk.SetAccountId(level.GetPlayerAvatar().GetId());
+            LoginOk.SetPassToken(level.GetPlayerAvatar().GetToken());
             LoginOk.SetServerMajorVersion(this.Version[0]);
             LoginOk.SetServerBuild(this.Version[1]);
             LoginOk.SetContentVersion(this.Version[2]);
             LoginOk.SetServerEnvironment("prod");
-			LoginOk.SetDaysSinceStartedPlaying(10);
-			LoginOk.SetServerTime(Math.Round(level.GetTime().Subtract(new DateTime(1970, 1, 1)).TotalSeconds * 1000.0).ToString());
-			LoginOk.SetAccountCreatedDate(level.GetPlayerAvatar().GetDonations().ToString());
+            LoginOk.SetDaysSinceStartedPlaying(10);
+            LoginOk.SetServerTime(Math.Round(level.GetTime().Subtract(new DateTime(1970, 1, 1)).TotalSeconds * 1000.0).ToString());
+            LoginOk.SetAccountCreatedDate(level.GetPlayerAvatar().GetDonations().ToString());
             LoginOk.SetStartupCooldownSeconds(0);
-			LoginOk.SetCountryCode(level.GetPlayerAvatar().GetRegion().ToUpper());
+            LoginOk.SetCountryCode(level.GetPlayerAvatar().GetRegion().ToUpper());
             PacketManager.Send(LoginOk);
             if (level.GetPlayerAvatar().GetBattleID() > 0)
             {

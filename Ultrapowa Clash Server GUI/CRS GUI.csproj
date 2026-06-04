@@ -270,7 +270,6 @@
     <Compile Include="Gamefiles\Logic\Treasure_Chests.cs" />
     <Compile Include="Gamefiles\Logic\Tutorials_Home.cs" />
     <Compile Include="Gamefiles\Logic\Tutorials_Npc.cs" />
-    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Helpers\CommandParser.cs" />
     <Compile Include="Helpers\GamePlayUtil.cs" />
     <Compile Include="Helpers\Helpers.cs" />
