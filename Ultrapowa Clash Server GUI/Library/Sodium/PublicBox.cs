@@ -27,7 +27,7 @@
             byte[] paddedbuffer = new byte[cipherLength + BOXZEROBYTES];
             Array.Copy(_Cipher, 0, paddedbuffer, BOXZEROBYTES, cipherLength);
 
-            if (curve25519xsalsa20poly1305.crypto_box_afternm(paddedbuffer, paddedbuffer, paddedbuffer.Length, _Nonce, this.PrecomputedSharedKey) != 0)
+            if (curve25519xsalsa20poly1305.crypto_box_open_afternm(paddedbuffer, paddedbuffer, paddedbuffer.Length, _Nonce, this.PrecomputedSharedKey) != 0)
             {
                 throw new Exception("PublicBox Decryption failed");
             }
