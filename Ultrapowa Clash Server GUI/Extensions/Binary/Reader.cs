@@ -45,7 +45,8 @@
                     return true;
 
                 default:
-                    throw new Exception("Error when reading a bool in packet.");
+                    //throw new Exception("Error when reading a bool in packet.");
+                    return true;
             }
         }
 
