@@ -106,7 +106,7 @@
             this.UnknownString[0] = this.Reader.ReadString(); // Unknown
 
             this.androidID = this.Reader.ReadString(); // ADID
-            this.preferredDeviceLanguage = this.Reader.ReadString(); // Region
+            this.preferredDeviceLanguage = this.Reader.ReadString() ?? string.Empty; // Region
 
             this.UnknownByte = this.Reader.ReadByte(); // Unknown
 
