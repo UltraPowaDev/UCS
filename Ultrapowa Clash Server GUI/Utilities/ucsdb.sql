@@ -39,6 +39,7 @@ CREATE TABLE `player` (
   `AccountStatus` tinyint(4) NOT NULL,
   `AccountPrivileges` tinyint(4) NOT NULL,
   `LastUpdateTime` datetime NOT NULL,
+  `IPAddress` varchar(255) DEFAULT NULL,
   `Avatar` text CHARACTER SET utf8mb4 NOT NULL,
   `GameObjects` text CHARACTER SET utf8mb4 NOT NULL,
   PRIMARY KEY (`PlayerId`)
