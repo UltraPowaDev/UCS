@@ -427,10 +427,10 @@ namespace CRS.Logic
         {
             JObject _Json = JObject.Parse(jsonString);
 
-            this.m_Id = _Json["player_id"].ToObject<long>();
-            this.m_Id = _Json["home_id"].ToObject<long>();
-            this.m_Id = _Json["backup_id"].ToObject<long>();
-            this.m_ClanID = _Json["clan_id"].ToObject<long>();
+            this.m_Id = _Json["player_id"]?.ToObject<long>() ?? 1L;
+            this.m_Id = _Json["home_id"]?.ToObject<long>() ?? this.m_Id;
+            this.m_Id = _Json["backup_id"]?.ToObject<long>() ?? this.m_Id;
+            this.m_ClanID = _Json["clan_id"]?.ToObject<long>() ?? 1L;
 
             this.m_Token = _Json["token"].ToObject<string>();
             this.m_Pass = _Json["password"].ToObject<string>();
