@@ -2,6 +2,6 @@
   <!-- og url: http://www.flamewall.net/ucs/system.xml -->
   <!-- you need to host system.xml in a webserver in a folder called "ucs" -->
   <version>0.6.5.5</version><!-- the original crs gui version was 0.6.5.4 -->
-  <url>http://</url>
+  <url>https://github.com/UltraPowaDev/UCS/</url><!-- this is the url that u get redirect to if u click download -->
   <about>Example update push, no update is actually available.</about>
 </appinfo>

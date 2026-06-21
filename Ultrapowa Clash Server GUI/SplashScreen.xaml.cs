@@ -198,7 +198,7 @@ Y88b. .d88P Y88b  d88P Y88b  d88P
                 DrawProgressBar(80, 100, 40, "█", "Checking update...            ");
             }
 
-            var XMLUrl = "http://www.flamewall.net/ucs/system.xml";
+            var XMLUrl = "https://raw.githubusercontent.com/UltraPowaDev/UCS/refs/heads/main/system.xml"; // og url was: http://www.flamewall.net/ucs/system.xml
             var NamesEL = "";
             XmlTextReader ReadTheXML = null;
 

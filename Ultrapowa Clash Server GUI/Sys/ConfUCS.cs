@@ -39,8 +39,8 @@ namespace CRS.Sys
         // Updater section
         public static bool IsUpdateAvailable = false;
         public static Version NewVer = new Version();
-        public static string UrlXML = "http://www.google.com";
-        public static string UrlPage = "http://www.ultrapowa.com";
+        public static string UrlXML = "https://raw.githubusercontent.com/UltraPowaDev/UCS/refs/heads/main/system.xml"; // og url was: http://www.google.com
+        public static string UrlPage = "https://github.com/UltraPowaDev/UCS/"; // og url was: http://www.ultrapowa.com
         public static string Changelog = "Error, changelog not downloaded...";
 
         public static string GetIP()
