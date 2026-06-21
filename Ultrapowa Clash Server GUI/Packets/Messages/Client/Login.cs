@@ -177,7 +177,6 @@
 
             if (level == null)
             {
-                level = ObjectManager.CreateAvatar(0, null);
                 if (string.IsNullOrEmpty(this.passToken))
                 {
                     byte[] tokenSeed = new byte[20];
@@ -187,6 +186,8 @@
                         this.passToken = BitConverter.ToString(sha.ComputeHash(tokenSeed)).Replace("-", string.Empty);
                     }
                 }
+
+                level = ObjectManager.CreateAvatar(this.accountId > 0 ? this.accountId : 0, this.passToken);
                 level.GetPlayerAvatar().SetToken(this.passToken);
                 level.GetPlayerAvatar().SetRegion(this.preferredDeviceLanguage.ToUpper());
                 level.GetPlayerAvatar().SetCreated();
